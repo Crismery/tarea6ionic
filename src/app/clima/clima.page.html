@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Clima de la RD</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>Clima de RD</ion-card-title>
+      <h2>Temperatura actual: {{ weather.temp_c }}°C</h2>
+      <p>Condición: {{ weather.wx_desc }}</p>
+      <p>Viento: {{ weather.windspd_kmh }} km/h</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

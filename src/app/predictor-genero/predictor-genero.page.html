@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Predictor Género</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-title size="large">Predictor genero</ion-title>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" name="nombre"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="predecirGenero()">Predecir Género</ion-button>
+  <div *ngIf="generoPredicho">
+    <div [ngStyle]="{'color': generoPredicho === 'male' ? 'blue' : 'pink'}">
+      Género predicho: {{ generoPredicho }}
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Tarea6-Couteau",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>wordpress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <img [src]="siteLogoUrl" alt="Rolling Stone Logo" class="site-logo">
+    <ion-list>
+      <ion-item *ngFor="let post of latestPosts">
+        <ion-thumbnail slot="start">
+          <img [src]="post.jetpack_featured_media_url || 'assets/rolling.jpg'" alt="Featured Image">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{ post.title.rendered }}</h2>
+          <p [innerHTML]="post.excerpt.rendered"></p>
+        </ion-label>
+        <ion-button fill="clear" (click)="openOriginalPost(post.link)">Visitar</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
